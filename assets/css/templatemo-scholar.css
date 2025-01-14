@@ -747,7 +747,7 @@ Banner Style
   background-image: url(../images/slide2.jpg);
 }
 .main-banner .item-4 {
-  background-image: url(../images/slide1.jpg);
+  background-image: url(../images/pexels-reneterp-1327438\ \(1\).jpg);
 }
 
 .main-banner .item {
@@ -1388,7 +1388,7 @@ Contact Style
 .contact-info div {
   max-width: 320px;
   flex: 1;
-  padding: 10px;
+  padding:10px;
   text-align: left;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -1768,6 +1768,10 @@ body {
     display: inline-block;
     margin: 0px 10px;
   }
+  .contact-info div {
+    padding:40px;
+    
+  }
 }
 
 @media (max-width: 992px) {
@@ -1953,6 +1957,12 @@ body {
   .contact-us .contact-us-content {
     padding: 30px;
   }
+
+  .contact-info div {
+    padding:40px;
+    
+  }
+  
   footer {
     margin-top: 30px;
   }
