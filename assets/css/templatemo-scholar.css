@@ -732,22 +732,22 @@ Banner Style
   background-repeat: no-repeat;
   background-size: cover;
   padding: 170px 0px 120px 0px;
-  border-bottom-right-radius: 25%;
+  border-bottom-right-radius: 20%;
 }
 
 .main-banner .item-1 {
-  background-image: url(../images/pexels-shvetsa-11368512\ \(1\).jpg);
-}
-
-.main-banner .item-2 {
   background-image: url(../images/slide3.jpg);
 }
 
+.main-banner .item-2 {
+  background-image: url(../images/pexels-cottonbro.jpg);
+}
+
 .main-banner .item-3 {
-  background-image: url(../images/slide2.jpg);
+  background-image: url(../images/pexels-pavel.jpg);
 }
 .main-banner .item-4 {
-  background-image: url(../images/pexels-reneterp-1327438\ \(1\).jpg);
+  background-image: url(../images/pexelsclarinet.jpg);
 }
 
 .main-banner .item {
