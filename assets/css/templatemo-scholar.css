@@ -731,16 +731,18 @@ Banner Style
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 170px 0px 120px 0px;
-  border-bottom-right-radius: 20%;
+  padding: 170px 0px 50px 0px;
+  border-radius: 0 0 25px 25px;
 }
-
+  
 .main-banner .item-1 {
-  background-image: url(../images/slide3.jpg);
+  background-image: url(../images/pexels-renet.jpg);
+  
 }
 
 .main-banner .item-2 {
   background-image: url(../images/pexels-cottonbro.jpg);
+  
 }
 
 .main-banner .item-3 {
@@ -748,6 +750,7 @@ Banner Style
 }
 .main-banner .item-4 {
   background-image: url(../images/pexelsclarinet.jpg);
+
 }
 
 .main-banner .item {
@@ -757,6 +760,7 @@ Banner Style
   border-radius: 25px;
   padding: 100px 100px;
   margin-left: 130px;
+  height: 600px;
 }
 
 .main-banner .item span.category {
@@ -771,7 +775,7 @@ Banner Style
 }
 
 .main-banner .item h2 {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 700;
   color: #fff;
   line-height: 70px;
@@ -781,7 +785,8 @@ Banner Style
 
 .main-banner .item p {
   color: #fff;
-
+  font-size: 16px;
+  font-weight: 600;
   width: 65%;
 }
 
@@ -858,6 +863,17 @@ Banner Style
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.5);
 }
+
+/* Transitions */
+
+/* .trans{
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+.trans.visible {
+  opacity: 1;
+} */
 
 
 /* 
@@ -1761,6 +1777,11 @@ body {
   .main-banner .owl-nav {
     left: 30px !important;
   }
+
+  .main-banner .item p {
+    display: none;
+  }
+
   .event_filter  {
     padding: 15px 20px;
   }
