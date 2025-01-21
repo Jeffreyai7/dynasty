@@ -417,11 +417,13 @@ Header Style
 }
 
 .header-area .main-nav .nav li:hover a {
-  opacity: 0.8;
+  color: #1e1e1e;
+  background-color: var(--primarycolor)
+
 }
 .header-area .main-nav .nav li a.active {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.10);
+  color: #1e1e1e;
+  background-color: var(--primarycolor);
   opacity: 1;
 }
 
@@ -444,6 +446,7 @@ Header Style
   z-index: 99;
   right: 20px;
   display: none;
+  background-color: var(--primarycolor);
 }
 
 .background-header .main-nav .menu-trigger {
@@ -655,7 +658,17 @@ Header Style
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
-  
+  .header-area .main-nav .menu-trigger span,
+.header-area .main-nav .menu-trigger span:before,
+.header-area .main-nav .menu-trigger span:after {
+  /* background-color: #fff; */
+}
+
+.header-area .main-nav .menu-trigger span:before,
+.header-area .main-nav .menu-trigger span:after {
+  /* background-color: #fff; */
+}
+
 }
 
 /*
@@ -726,14 +739,14 @@ Banner Style
 --------------------------------------------- 
 */
 
-.main-banner {
+/* .main-banner {
   background-image: url(../images/banner-bg-fotor-bg.png);
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 170px 0px 50px 0px;
   border-radius: 0 0 25px 25px;
-}
+} */
   
 .main-banner .item-1 {
   background-image: url(../images/pexels-renet.jpg);
@@ -755,11 +768,11 @@ Banner Style
 
 .main-banner .item {
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
-  border-radius: 25px;
-  padding: 100px 100px;
-  margin-left: 130px;
+  /* border-radius: 25px; */
+  padding: 150px 100px;
+  /* margin-top: 170px; */
   height: 600px;
 }
 
@@ -1705,6 +1718,24 @@ footer::before {
   content: '';
   z-index: 2;
 }
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  font-size: 60px; /* Adjust icon size */
+  z-index: 1000;
+}
+
+ .whatsapp-icon a {
+  text-decoration: none;
+  color: #25D366; 
+
+} 
+
+.whatsapp-icon a:hover {
+  color: #128C7E; /* Darker green on hover */
+}
+
 
 .socials {
   text-align: center;
@@ -1793,6 +1824,10 @@ body {
     padding:40px;
     
   }
+  .whatsapp-icon {
+    font-size: 40px; /* Adjust icon size */
+  }
+  
 }
 
 @media (max-width: 992px) {

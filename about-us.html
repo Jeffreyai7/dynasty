@@ -342,6 +342,12 @@ https://templatemo.com/tm-586-scholar
       </div>
     </div>
   </div>
+  <div class="whatsapp-icon">
+    <a title="Chat with us" href="https://wa.link/iy2ky2" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
 
   <footer>
     <div class="container">
@@ -365,6 +371,51 @@ https://templatemo.com/tm-586-scholar
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script>
+    (function($) {
+    $.fn.addAutoplay = function(options) {
+        const settings = $.extend({
+            interval: 3000,  // Time between slides
+            hoverPause: true
+        }, options);
 
+        return this.each(function() {
+            const $carousel = $(this);
+            let intervalId;
+
+            // Start autoplay
+            function startAutoplay() {
+                intervalId = setInterval(() => {
+                    $carousel.trigger('next.owl.carousel');
+                }, settings.interval);
+            }
+
+            // Stop autoplay
+            function stopAutoplay() {
+                clearInterval(intervalId);
+            }
+
+            // Initialize autoplay
+            startAutoplay();
+
+            // Handle hover pause
+            if (settings.hoverPause) {
+                $carousel.on('mouseover', stopAutoplay);
+                $carousel.on('mouseleave', startAutoplay);
+            }
+        });
+    };
+})(jQuery);
+
+// Usage
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    items: 1
+}).addAutoplay({
+    interval: 3000, // 3 seconds
+    hoverPause: true
+});
+
+  </script>
   </body>
 </html>
