@@ -320,7 +320,7 @@ Header Style
 
 .header-area .main-nav {
   background: transparent;
-  display: flex
+  display: flex;
 }
  
 .header-area .main-nav .logo {
@@ -759,10 +759,10 @@ Banner Style
 }
 
 .main-banner .item-3 {
-  background-image: url(../images/pexels-pavel.jpg);
+  background-image: url(../images/pexels-olly-756507.jpg);
 }
 .main-banner .item-4 {
-  background-image: url(../images/pexelsclarinet.jpg);
+  background-image: url(../images/pexels-ninosouza-1966012.jpg);
 
 }
 
@@ -773,6 +773,7 @@ Banner Style
   /* border-radius: 25px; */
   padding: 150px 100px;
   /* margin-top: 170px; */
+  margin-top: 0px;
   height: 600px;
 }
 
@@ -1067,6 +1068,94 @@ Courses Style
 --------------------------------------------- 
 */
 
+.courses {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+
+.events_item .thumb {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.events_item .thumb img {
+  margin-bottom: -5px;
+}
+
+.events_item .thumb span.category {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color:var(--primarycolor);
+  background-color: rgba(250, 250, 250, 0.95);
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.events_item .thumb span.price {
+  position: absolute;
+  right: -30px;
+  top: -50px;
+  background-color:var(--primarycolor);
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all .3s;
+}
+
+.events_item .thumb span.price h6 {
+  margin-top: 72px;
+  margin-left: 22px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+}
+
+.events_item {
+  background-color: #f1f0fe;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+} 
+
+.events_item .down-content {
+  padding: 20px 30px 25px 30px;
+}
+
+.events_item .down-content span.author {
+  color: var(--primarycolor);
+  font-size: 15px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.events_item .down-content h4 {
+  font-size: 22px;
+  font-weight: 600;
+  transition: all .3s;
+}
+
+.events_item:hover .down-content h4 {
+  color: var(--primarycolor)
+}
+
+.events_item:hover .thumb span.price {
+  transform: scale(1.2);
+}
+
+
+
+
 /* 
 ---------------------------------------------
 Facts Style
@@ -1077,7 +1166,7 @@ Facts Style
   position: relative;
   padding: 120px 0px 80px 0px;
   overflow: hidden;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 
 }
 
@@ -1812,7 +1901,10 @@ body {
   .main-banner .item p {
     display: none;
   }
-
+  .main-banner {
+    padding-top: 100px;
+  }
+  
   .event_filter  {
     padding: 15px 20px;
   }
@@ -1842,8 +1934,9 @@ body {
     border-right: none;
   }
   .main-banner {
-    padding-top: 100px;
+    /* padding-top: 100px; */
   }
+
   .main-banner .item {
     padding: 100px 60px 140px 60px;
     margin-left: 0px;
