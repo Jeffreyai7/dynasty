@@ -590,27 +590,39 @@ https://templatemo.com/tm-586-scholar
   <script src="assets/js/custom.js"></script>
   <script src="assets/js/trans.js"></script>
   <script>
-    (function($) {
+(function($) {
     $.fn.addAutoplay = function(options) {
         const settings = $.extend({
             interval: 3000,  // Time between slides
-            hoverPause: true
+            hoverPause: true,
+            transitionSpeed: 600 // Slide transition duration in milliseconds
         }, options);
 
         return this.each(function() {
             const $carousel = $(this);
             let intervalId;
 
+            // Apply smooth transitions
+            $carousel.owlCarousel({
+                loop: true,
+                items: 1,
+                autoplay: false,
+                smartSpeed: settings.transitionSpeed, // Control the transition speed
+            });
+
             // Start autoplay
             function startAutoplay() {
-                intervalId = setInterval(() => {
-                    $carousel.trigger('next.owl.carousel');
-                }, settings.interval);
+                if (!intervalId) {
+                    intervalId = setInterval(() => {
+                        $carousel.trigger('next.owl.carousel');
+                    }, settings.interval);
+                }
             }
 
             // Stop autoplay
             function stopAutoplay() {
                 clearInterval(intervalId);
+                intervalId = null;
             }
 
             // Initialize autoplay
@@ -621,17 +633,21 @@ https://templatemo.com/tm-586-scholar
                 $carousel.on('mouseover', stopAutoplay);
                 $carousel.on('mouseleave', startAutoplay);
             }
+
+            // Restart autoplay if the window gains focus
+            $(window).on('focus', startAutoplay);
+
+            // Stop autoplay if the window loses focus
+            $(window).on('blur', stopAutoplay);
         });
     };
 })(jQuery);
 
 // Usage
-$('.owl-carousel').owlCarousel({
-    loop: true,
-    items: 1
-}).addAutoplay({
+$('.owl-carousel').addAutoplay({
     interval: 3000, // 3 seconds
-    hoverPause: true
+    hoverPause: true,
+    transitionSpeed: 600
 });
 
 </script>
