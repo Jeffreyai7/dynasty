@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST['message']);
 
     // Email settings
-    $to = "jirukeh@gmail.com";
+    $to = "contact@dynastymusic.com.ng";
     $subject = "Contact Form Submission";
     $headers = "From: $email";
 
